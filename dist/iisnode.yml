@@ -1,0 +1,16 @@
+# iisnode configuration
+node_env: production
+nodeProcessCommandLine: "node.exe"
+nodeProcessCountPerApplication: 1
+maxConcurrentRequestsPerProcess: 1024
+maxNamedPipeConnectionRetry: 100
+namedPipeConnectionRetryDelay: 250
+maxNamedPipeConnectionPoolSize: 512
+maxNamedPipePooledConnectionAge: 30000
+asyncCompletionThreadCount: 0
+initialRequestBufferSize: 4096
+maxRequestBufferSize: 65536
+watchedFiles: *.js;iisnode.yml
+enableXFF: false
+promoteServerVars: false
+configOverrides: iisnode.yml

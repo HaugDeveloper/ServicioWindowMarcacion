@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haug S. A. - API de Marcaciones Biométricas</title>
+  <meta name="description" content="API empresarial para gestión de marcaciones ZKTeco, integración con ADMS y control de acceso.">
+  <style>
+    /* ====== VARIABLES ====== */
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #60a5fa;
+      --secondary: #475569;
+      --accent: #0ea5e9;
+      --background: #ffffff;
+      --surface: #f8fafc;
+      --text: #0f172a;
+      --text-light: #475569;
+      --border: #e2e8f0;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --error: #ef4444;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      --radius-sm: 0.375rem;
+      --radius: 0.5rem;
+      --radius-lg: 0.75rem;
+    }
+
+    /* ====== RESET ====== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.5;
+    }
+
+    /* ====== UTILIDADES ====== */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ====== HEADER ====== */
+    .header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .logo-icon {
+      width: 2rem;
+      height: 2rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* ====== HERO ====== */
+    .hero {
+      padding: 5rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: var(--primary-dark);
+      padding: 0.25rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--text), var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--text-light);
+    }
+
+    /* ====== CARD PREVIEW ====== */
+    .preview-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .preview-header {
+      background: var(--surface);
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .preview-dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+    }
+
+    .preview-dot.red { background: #ef4444; }
+    .preview-dot.yellow { background: #f59e0b; }
+    .preview-dot.green { background: #10b981; }
+
+    .preview-content {
+      padding: 1.5rem;
+    }
+
+    .preview-content pre {
+      background: var(--surface);
+      padding: 1rem;
+      border-radius: var(--radius);
+      overflow-x: auto;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.875rem;
+      border: 1px solid var(--border);
+    }
+
+    .endpoint-list {
+      margin-top: 1rem;
+    }
+
+    .endpoint-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .method {
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .method.get { background: #dbeafe; color: var(--primary-dark); }
+    .method.post { background: #dcfce7; color: #166534; }
+    .method.put { background: #fef9c3; color: #854d0e; }
+    .method.delete { background: #fee2e2; color: #991b1b; }
+
+    /* ====== FEATURES ====== */
+    .features {
+      padding: 5rem 0;
+      background: var(--surface);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-title p {
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .feature-icon {
+      width: 3rem;
+      height: 3rem;
+      background: #dbeafe;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-card p {
+      color: var(--text-light);
+    }
+
+    /* ====== TECH STACK ====== */
+    .tech-stack {
+      padding: 5rem 0;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .tech-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .tech-item span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-item h4 {
+      font-weight: 600;
+    }
+
+    /* ====== FOOTER ====== */
+    .footer {
+      background: var(--text);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand p {
+      color: #94a3b8;
+      margin-top: 1rem;
+    }
+
+    .footer-links h4 {
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #334155;
+      padding-top: 2rem;
+      text-align: center;
+      color: #94a3b8;
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="/" class="logo">
+        <span class="logo-icon">H</span>
+        <span>Haug S. A.</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Características</a>
+        <a href="#tech-stack">Tecnologías</a>
+        <a href="#documentacion">Documentación</a>
+        <a href="#soporte">Soporte</a>
+      </div>
+      <div>
+        <a href="/login" class="btn btn-outline" style="margin-right: 1rem;">Iniciar sesión</a>
+        <a href="/registro" class="btn btn-primary">Registrarse</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <span class="hero-badge">⚡ API de Marcaciones Biométricas</span>
+        <h1>Gestiona marcaciones ZKTeco con una API empresarial</h1>
+        <p>Integración seamless con dispositivos biométricos, ADMS y sistemas de control de acceso. Escalable, segura y en tiempo real.</p>
+        <div class="hero-cta">
+          <a href="/documentacion" class="btn btn-primary">Comenzar →</a>
+          <a href="/demo" class="btn btn-outline">Ver demo</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">99.9%</span>
+            <span class="stat-label">Uptime</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Dispositivos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Soporte</span>
+          </div>
+        </div>
+      </div>
+      <div class="preview-card">
+        <div class="preview-header">
+          <span class="preview-dot red"></span>
+          <span class="preview-dot yellow"></span>
+          <span class="preview-dot green"></span>
+        </div>
+        <div class="preview-content">
+          <pre>{
+  "api": "Haug Marcaciones",
+  "version": "2.0.0",
+  "baseUrl": "https://api.haug.com.pe/v2",
+  "endpoints": [
+    "/marcaciones",
+    "/dispositivos",
+    "/empleados",
+    "/reportes"
+  ]
+}</pre>
+          <div class="endpoint-list">
+            <div class="endpoint-item">
+              <span class="method get">GET</span>
+              <code>/api/v2/marcaciones</code>
+              <span style="margin-left: auto; color: var(--text-light);">Listar marcaciones</span>
+            </div>
+            <div class="endpoint-item">
+              <span class="method post">POST</span>
+              <code>/api/v2/marcaciones/sincronizar</code>
+              <span style="margin-left: auto; color: var(--text-light);">Sincronizar</span>
+            </div>
+            <div class="endpoint-item">
+              <span class="method get">GET</span>
+              <code>/api/v2/dispositivos</code>
+              <span style="margin-left: auto; color: var(--text-light);">Estado dispositivos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-title">
+          <h2>Todo lo que necesitas para gestionar marcaciones</h2>
+          <p>Una solución completa para empresas que utilizan dispositivos ZKTeco y sistemas ADMS.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔌</div>
+            <h3>Integración ZKTeco</h3>
+            <p>Conexión directa con dispositivos biométricos ZKTeco, BioTime y compatibles. Sincronización en tiempo real.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Reportes avanzados</h3>
+            <p>Genera reportes personalizados de marcaciones, horas extras, tardanzas y ausencias en múltiples formatos.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>Sincronización ADMS</h3>
+            <p>Integración bidireccional con ADMS para mantener actualizados todos los registros de marcaciones.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔐</div>
+            <h3>Seguridad empresarial</h3>
+            <p>Autenticación JWT, cifrado de datos y auditoría completa de todas las operaciones.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Alta disponibilidad</h3>
+            <p>Arquitectura escalable con balanceo de carga y respaldos automáticos.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Multiplataforma</h3>
+            <p>APIs REST diseñadas para integrarse con cualquier frontend, app móvil o sistema legacy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech-stack" class="tech-stack container">
+      <div class="section-title">
+        <h2>Tecnologías que utilizamos</h2>
+        <p>Stack moderno y robusto para garantizar rendimiento y confiabilidad.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <span>📦</span>
+          <h4>Node.js</h4>
+          <p style="color: var(--text-light); font-size: 0.875rem;">Runtime principal</p>
+        </div>
+        <div class="tech-item">
+          <span>🗄️</span>
+          <h4>SQL Server</h4>
+          <p style="color: var(--text-light); font-size: 0.875rem;">Base de datos</p>
+        </div>
+        <div class="tech-item">
+          <span>🔷</span>
+          <h4>TypeScript</h4>
+          <p style="color: var(--text-light); font-size: 0.875rem;">Tipado seguro</p>
+        </div>
+        <div class="tech-item">
+          <span>📡</span>
+          <h4>REST API</h4>
+          <p style="color: var(--text-light); font-size: 0.875rem;">Arquitectura</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 5rem 0; background: var(--surface);">
+      <div class="container" style="text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">¿Listo para integrar tus dispositivos?</h2>
+        <p style="color: var(--text-light); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Comienza a usar nuestra API hoy mismo. Documentación completa, soporte 24/7 y pruebas gratuitas.
+        </p>
+        <a href="/contacto" class="btn btn-primary" style="padding: 1rem 2rem;">Contactar a ventas →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Haug S. A.</h3>
+          <p>Soluciones tecnológicas empresariales para gestión de marcaciones y control de acceso.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Producto</h4>
+          <ul>
+            <li><a href="#features">Características</a></li>
+            <li><a href="#tech-stack">Tecnologías</a></li>
+            <li><a href="/precios">Precios</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="/documentacion">Documentación</a></li>
+            <li><a href="/api-reference">API Reference</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/soporte">Soporte</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacidad">Privacidad</a></li>
+            <li><a href="/terminos">Términos</a></li>
+            <li><a href="/seguridad">Seguridad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> Haug S. A. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

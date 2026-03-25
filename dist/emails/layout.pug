@@ -1,0 +1,78 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title || "Reporte"}
+
+    style(type="text/css").
+      body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+      table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+      body {
+          margin          : 0;
+          padding         : 20px;
+          background-color: #fcfcfc;
+          font-family     : Arial, Helvetica, sans-serif;
+          color           : #333333;
+      }
+      .card {
+          max-width    : 700px;
+          margin       : auto;
+          background   : #ffffff;
+          border-radius: 8px;
+          box-shadow   : 0 2px 10px rgba(0, 0, 0, 0.05);
+          overflow     : hidden;
+          border       : 1px solid #eeeeee;
+      }
+      .body-content {
+          padding: 30px;
+      }
+      .muted {
+          font-size: 12px;
+          color    : #999;
+      }
+      .data-table {
+          width          : 100%;
+          border-collapse: separate;
+          border-spacing : 0;
+          margin-top     : 20px;
+          border         : 1px solid #e0e0e0;
+          border-radius  : 6px;
+          overflow       : hidden;
+      }
+      .data-table thead th {
+          background-color: #f8f8f8;
+          padding         : 12px 10px;
+          text-align      : left;
+          font-size       : 12px;
+          color           : #555555;
+          font-weight     : 600;
+          vertical-align  : middle;
+          border-bottom   : 1px solid #e0e0e0;
+      }
+      .data-table tbody td {
+          padding         : 14px 10px;
+          font-size       : 14px;
+          border-bottom   : 1px solid #f5f5f5;
+          color           : #222222;
+          background-color: #ffffff;
+      }
+      .center-align { text-align: center; }
+      .badge {
+          display      : inline-block;
+          padding      : 4px 10px;
+          border-radius: 4px;
+          font-size    : 12px;
+          font-weight  : 700;
+          white-space  : nowrap;
+      }
+
+  body
+    center
+      .card(role="article")
+        include partials/header
+
+        .body-content
+          block content
+
+        include partials/footer

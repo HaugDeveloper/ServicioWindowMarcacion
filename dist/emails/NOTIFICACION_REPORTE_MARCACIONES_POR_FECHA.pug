@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  p(style="margin: 0 0 20px 0; color:#555555; font-size: 14px; line-height: 1.6;")
+    | Se presenta el **resumen estadístico de las marcaciones** para el día **#{fecha}**.
+    | Las cifras reflejan la actividad de todo el personal.
+
+  table.data-table(role="presentation", width="100%", cellspacing="0", cellpadding="0", border="0")
+    thead
+      tr
+        th(rowspan="2", style="width: 15%; border-right: 1px solid #e0e0e0; text-align: center;") Fecha
+        th(colspan="2", style="text-align: center; background-color: #e6f0ff; color:#007bff;") PERSONAL
+        th(colspan="4", style="text-align: center; background-color: #e6f0ff; color:#007bff; border-left:1px solid #e0e0e0;") MARCACIONES
+      tr
+        th Activo
+        th Marcaron
+        th.center-align Ingreso
+        th.center-align Salida Al.
+        th.center-align Retorno Al.
+        th.center-align Salida
+
+    tbody
+      tr
+        td.center-align(style="font-weight:700;") #{fecha}
+        td(style="font-weight:700;") #{personalActivo}
+        td(style="font-weight:700;") #{personalQueMarcaron}
+
+        td.center-align 
+          span.badge(style="background:#e9fce9; color:#18a818;") #{ingreso}
+
+        td.center-align
+          span.badge(style="background:#fff7e6; color:#e09400;") #{salidaAlmorzar}
+
+        td.center-align
+          span.badge(style="background:#f1f7ff; color:#007bff;") #{retornoAlmorzar}
+
+        td.center-align
+          span.badge(style="background:#ffecec; color:#dc3545;") #{salida}

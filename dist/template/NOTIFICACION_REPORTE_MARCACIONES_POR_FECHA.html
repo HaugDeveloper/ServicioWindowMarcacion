@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reporte de Marcaciones Diarias - ${fecha}</title>
+    <style type="text/css">
+        /* --- Paleta de Colores (Mantenida para el resto del estilo) --- */
+        :root {
+            --primary-vibrant: #D01C0D; /* Rojo principal fuerte y profundo */
+            --primary-soft: #f53423;    /* Rojo suave/acento, el más brillante */
+            --primary-sidebar: #ff5546; /* Rojo de acento intermedio */
+            --secondary-deep: #B12216;  /* Rojo secundario oscuro, para texto/bordes */
+            --color-success: #28a745;   /* Verde para éxito/marcó */
+            --color-danger: #D01C0D;    /* Usamos el primario fuerte para No Marcaron */
+        }
+
+        /* Base y Resets para Email */
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            /* Eliminamos padding del body */
+            background-color: #fcfcfc;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333333;
+        }
+
+        /* La "tarjeta" principal ahora es una tabla de 600px */
+        .card-container {
+            width: 100%;
+            max-width: 600px;
+            /* Límite para el ancho */
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #eeeeee;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 25px 30px;
+            border-bottom: 5px solid var(--primary-vibrant); /* Borde más grueso para impacto */
+        }
+
+        /* Se eliminan estilos de .logo de aquí para ponerlos INLINE */
+
+        .title {
+            font-size: 20px;
+            font-weight: 800;
+            margin: 0;
+            color: var(--secondary-deep);
+        }
+
+        .subtitle {
+            margin: 2px 0 0 0;
+            font-size: 13px;
+            color: #888888;
+        }
+
+        .body-content {
+            padding: 30px;
+        }
+
+        /* Estilo general para tablas de datos */
+        .summary-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Estilo general para el header de cada tabla compacta */
+        .summary-table thead th {
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 13px;
+            color: #ffffff;
+            font-weight: 700;
+            /* El color de fondo se define INLINE + bgcolor para máxima compatibilidad */
+            border-bottom: 2px solid var(--secondary-deep);
+        }
+
+        /* Estilo para filas de datos */
+        .summary-table tbody td {
+            padding: 12px 15px;
+            font-size: 14px;
+            color: #222222;
+            background-color: #ffffff;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .summary-table tbody tr:nth-child(even) td {
+            background-color: #fafafa;
+        }
+
+        /* Colores específicos para valores */
+        .value-success {
+            color: var(--color-success);
+        }
+
+        .value-danger {
+            color: var(--color-danger);
+        }
+
+        .value-accent {
+            color: var(--primary-vibrant);
+        }
+
+        .muted {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--secondary-deep);
+            margin: 25px 0 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        /* Fix para MSO (Outlook) */
+        .mso-fix {
+            mso-line-height-rule: exactly;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #fcfcfc;">
+
+    <!-- 1. TABLA ENVOLVENTE EXTERNA (Asegura centrado y color de fondo) -->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+
+                <!-- 2. TABLA ENVOLVENTE INTERNA (Define el ancho máximo de 600px para el cuerpo) -->
+                <table role="presentation" width="800" cellspacing="0" cellpadding="0" border="0" align="center"
+                    class="card-container" style="width: 100%; max-width: 800px;">
+
+                    <!-- HEADER -->
+                    <tr>
+                        <td>
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                                class="header">
+                                <tr>
+                                    <td style="width: 40px; padding-right: 15px; vertical-align: top;">
+                                        <!-- Logo con color INLINE y hex code directo -->
+                                        <div style="width: 40px; height: 40px; border-radius: 10px; background-color: #D01C0D; font-size: 18px; font-weight: 700; color: #ffffff; display: block; line-height: 40px; text-align: center;">SSCA</div>
+                                    </td>
+                                    <td style="vertical-align: top;">
+                                        <p class="title">Resumen Diario de Asistencia y Marcaciones</p>
+                                        <p class="subtitle">Datos consolidados del sistema.</p>
+                                    </td>
+                                    <td style="text-align:right; width: 200px; vertical-align: top;">
+                                        <p class="muted" style="margin:0;">Reporte del Día</p>
+                                        <p
+                                            style="margin:0; font-size:14px; font-weight:700; color:var(--primary-vibrant);">
+                                            ${fecha}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END HEADER -->
+
+                    <!-- BODY CONTENT -->
+                    <tr>
+                        <td class="body-content">
+                            <p style="margin: 0 0 20px 0; color:#555555; font-size: 14px; line-height: 1.6;">
+                                Este informe detalla las estadísticas de asistencia del personal activo
+                                (**${Total_Personal_S10}**) y el comportamiento de las marcaciones para la fecha
+                                **${fecha}**.
+                            </p>
+
+                            <!-- TABLA 1: ESTADÍSTICAS GENERALES DE PERSONAL -->
+                            <p class="section-title" style="margin-top: 0;">1. Resumen General del Personal</p>
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                                class="summary-table">
+                                <thead>
+                                    <tr>
+                                        <!-- Aplicación de bgcolor y background-color con el color más brillante: #f53423 -->
+                                        <th colspan="2" bgcolor="#f53423" style="background-color: #f53423; color: #ffffff;">ESTADÍSTICAS GENERALES (Personal)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="label-cell">Total Personal S10 (Activo)</td>
+                                        <td class="value-cell value-accent">${Total_Personal_S10}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Personal en BioTime (Sincronizado)</td>
+                                        <td class="value-cell">${Total_Personal_Biotime}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Total con Marcación Registrada</td>
+                                        <td class="value-cell value-success">${Total_Marcaron}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Total sin Marcación Registrada</td>
+                                        <td class="value-cell value-danger">${Total_NoMarcaron}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- TABLA 2: DETALLE BIOMÉTRICO (MÉTODOS DE MARCACIÓN) -->
+                            <p class="section-title">2. Métodos de Marcación</p>
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                                class="summary-table">
+                                <thead>
+                                    <tr>
+                                        <!-- Aplicación de bgcolor y background-color con el color intermedio: #ff5546 -->
+                                        <th colspan="2" bgcolor="#ff5546" style="background-color: #ff5546; color: #ffffff;">DETALLE BIOMÉTRICO (Total: ${Total_ConBiometria})</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="label-cell">Personal con Biometría (Total)</td>
+                                        <td class="value-cell value-accent">${Total_ConBiometria}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Personal sin Biométrica</td>
+                                        <td class="value-cell value-danger">${Total_SinBiometria}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Total con Huella</td>
+                                        <td class="value-cell">${Total_Huella}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Total con Rostro</td>
+                                        <td class="value-cell">${Total_Foto}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Total con Foto</td>
+                                        <td class="value-cell">${Total_Foto}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- TABLA 3: MOVIMIENTO DETALLADO DE ASISTENCIA -->
+                            <p class="section-title">3. Detalle de Movimiento</p>
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                                class="summary-table">
+                                <thead>
+                                    <tr>
+                                        <!-- Aplicación de bgcolor y background-color con el color fuerte: #D01C0D -->
+                                        <th colspan="2" bgcolor="#D01C0D" style="background-color: #D01C0D; color: #ffffff;">MOVIMIENTO POR TIPO DE MARCACIÓN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="label-cell">Marcaciones de Ingreso (Inicio Jornada)</td>
+                                        <td class="value-cell value-success">${Total_Ingresos}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Marcaciones de Salida a Almuerzo</td>
+                                        <td class="value-cell">${Total_SalidaAlmorzar}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Marcaciones de Retorno de Almuerzo</td>
+                                        <td class="value-cell">${Total_RetornoAlmorzar}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-cell">Marcaciones de Salida (Fin Jornada)</td>
+                                        <td class="value-cell value-danger">${Total_Salida}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <!-- FOOTER -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                                style="margin-top:25px; font-size:12px; color:#999; border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                                <tr>
+                                    <td style="text-align: left;">
+                                        Sistema de Control de Asistencia | SSCA
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <a href="https://ti.haug.com.pe/webtareo/" target="_blank"
+                                            style="color:var(--primary-vibrant); text-decoration: none; font-weight: 600;">Acceder
+                                            al Sistema</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- END FOOTER -->
+
+                        </td>
+                    </tr>
+                    <!-- END BODY CONTENT -->
+
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END 1. TABLA ENVOLVENTE EXTERNA -->
+
+</body>
+
+</html>
