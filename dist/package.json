@@ -4,7 +4,7 @@
   "description": "Servidor para gestionar las marcaciones de los dispositivos ZKTeco y BioTime, con integración a ADMS y otras funcionalidades relacionadas.",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=\"--no-deprecation\" nodemon --exec npx ts-node --files ./src/app.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --exit-child src/app.ts",
     "build": "tsc && node ./src/general/copy-assets.js",
     "start": "node dist/app.js",
     "start:prod": "cross-env NODE_ENV=production NODE_OPTIONS=\"--no-deprecation\" node dist/app.js"
@@ -31,6 +31,7 @@
     "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.1",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3",
     "uuid": "^13.0.0"

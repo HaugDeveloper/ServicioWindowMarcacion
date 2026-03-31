@@ -1,0 +1,805 @@
+[11:33:31] ======================================
+[11:33:31] INICIANDO SERVICIO...
+[11:33:31] ======================================
+[11:33:31] Middlewares configurados correctamente
+[11:33:31] ======================================
+[11:33:31] SERVICIO DE MARCADORES HAUG
+[11:33:31] ======================================
+[11:33:31] Entorno: development
+[11:33:31] Puerto: 9000
+[11:33:31] URL: http://localhost:9000
+[11:33:31] DB: 10.100.1.28
+[11:33:31] Inicio: 2026-03-26T16:33:31.851Z
+[11:33:31] ======================================
+
+[11:33:31] ======================================
+[11:33:31] INICIALIZANDO CRON JOBS...
+[11:33:31] ======================================
+[11:33:31] CRON iniciados correctamente
+[11:33:31] CRON activos desde: 11:33:31
+[11:34:23] ======================================
+[11:34:23] INICIANDO SERVICIO...
+[11:34:23] ======================================
+[11:34:23] Middlewares configurados correctamente
+[11:34:23] ======================================
+[11:34:23] SERVICIO DE MARCADORES HAUG
+[11:34:23] ======================================
+[11:34:23] Entorno: development
+[11:34:23] Puerto: 9000
+[11:34:23] URL: http://localhost:9000
+[11:34:23] DB: 10.100.1.28
+[11:34:23] Inicio: 2026-03-26T16:34:23.070Z
+[11:34:23] ======================================
+
+[11:34:23] ======================================
+[11:34:23] INICIALIZANDO CRON JOBS...
+[11:34:23] ======================================
+[11:34:23] CRON iniciados correctamente
+[11:34:23] CRON activos desde: 11:34:23
+[11:35:00] === INICIO syncTransaccionsBioTimes ===
+[11:35:00] Rango: 2026-03-26 11:00:00 → 2026-03-26 11:35:00
+[11:35:00] Página 1: 0
+[11:35:00] Sin datos
+[11:35:00] Sincronizando marcaciones...
+[11:35:00] Sincronizando completada...
+[11:35:00] === FIN syncTransaccionsBioTimes ===
+
+[11:35:18] ======================================
+[11:35:18] INICIANDO SERVICIO...
+[11:35:18] ======================================
+[11:35:18] Middlewares configurados correctamente
+[11:35:18] ======================================
+[11:35:18] SERVICIO DE MARCADORES HAUG
+[11:35:18] ======================================
+[11:35:18] Entorno: development
+[11:35:18] Puerto: 9000
+[11:35:18] URL: http://localhost:9000
+[11:35:18] DB: 10.100.1.28
+[11:35:18] Inicio: 2026-03-26T16:35:18.645Z
+[11:35:18] ======================================
+
+[11:35:18] ======================================
+[11:35:18] INICIALIZANDO CRON JOBS...
+[11:35:18] ======================================
+[11:35:18] CRON iniciados correctamente
+[11:35:18] CRON activos desde: 11:35:18
+[11:35:25] ======================================
+[11:35:25] INICIANDO SERVICIO...
+[11:35:25] ======================================
+[11:35:25] Middlewares configurados correctamente
+[11:35:25] ======================================
+[11:35:25] SERVICIO DE MARCADORES HAUG
+[11:35:25] ======================================
+[11:35:25] Entorno: development
+[11:35:25] Puerto: 9000
+[11:35:25] URL: http://localhost:9000
+[11:35:25] DB: 10.100.1.28
+[11:35:25] Inicio: 2026-03-26T16:35:25.079Z
+[11:35:25] ======================================
+
+[11:35:25] ======================================
+[11:35:25] INICIALIZANDO CRON JOBS...
+[11:35:25] ======================================
+[11:35:25] CRON iniciados correctamente
+[11:35:25] CRON activos desde: 11:35:25
+[11:36:04] ======================================
+[11:36:04] INICIANDO SERVICIO...
+[11:36:04] ======================================
+[11:36:05] Middlewares configurados correctamente
+[11:36:05] ======================================
+[11:36:05] SERVICIO DE MARCADORES HAUG
+[11:36:05] ======================================
+[11:36:05] Entorno: development
+[11:36:05] Puerto: 9000
+[11:36:05] URL: http://localhost:9000
+[11:36:05] DB: 10.100.1.28
+[11:36:05] Inicio: 2026-03-26T16:36:05.007Z
+[11:36:05] ======================================
+
+[11:36:05] ======================================
+[11:36:05] INICIALIZANDO CRON JOBS...
+[11:36:05] ======================================
+[11:36:05] CRON iniciados correctamente
+[11:36:05] CRON activos desde: 11:36:05
+[11:36:23] ======================================
+[11:36:23] INICIANDO SERVICIO...
+[11:36:23] ======================================
+[11:36:23] Middlewares configurados correctamente
+[11:36:23] ======================================
+[11:36:23] SERVICIO DE MARCADORES HAUG
+[11:36:23] ======================================
+[11:36:23] Entorno: development
+[11:36:23] Puerto: 9000
+[11:36:23] URL: http://localhost:9000
+[11:36:23] DB: 10.100.1.28
+[11:36:23] Inicio: 2026-03-26T16:36:23.209Z
+[11:36:23] ======================================
+
+[11:36:23] ======================================
+[11:36:23] INICIALIZANDO CRON JOBS...
+[11:36:23] ======================================
+[11:36:23] CRON iniciados correctamente
+[11:36:23] CRON activos desde: 11:36:23
+[11:37:00] === INICIO syncDevicesState ===
+[11:37:00] Total dispositivos: 2
+[11:37:00] Activos: 2 | Caídos: 0
+[11:37:00] === FIN syncDevicesState ===
+
+[11:38:00] === INICIO syncDevicesState ===
+[11:38:00] Total dispositivos: 2
+[11:38:00] Activos: 2 | Caídos: 0
+[11:38:00] === FIN syncDevicesState ===
+
+[11:39:00] === INICIO syncDevicesState ===
+[11:39:00] Total dispositivos: 2
+[11:39:00] Activos: 2 | Caídos: 0
+[11:39:00] === FIN syncDevicesState ===
+
+[11:39:14] ======================================
+[11:39:14] INICIANDO SERVICIO...
+[11:39:14] ======================================
+[11:39:14] Middlewares configurados correctamente
+[11:39:14] ======================================
+[11:39:14] SERVICIO DE MARCADORES HAUG
+[11:39:14] ======================================
+[11:39:14] Entorno: development
+[11:39:14] Puerto: 9000
+[11:39:14] URL: http://localhost:9000
+[11:39:14] DB: 10.100.1.28
+[11:39:14] Inicio: 2026-03-26T16:39:14.231Z
+[11:39:14] ======================================
+
+[11:39:14] ======================================
+[11:39:14] INICIALIZANDO CRON JOBS...
+[11:39:14] ======================================
+[11:39:14] CRON iniciados correctamente
+[11:39:14] CRON activos desde: 11:39:14
+[11:40:00] === INICIO syncDevicesState ===
+[11:40:00] Total dispositivos: 2
+[11:40:00] Activos: 2 | Caídos: 0
+[11:40:00] === FIN syncDevicesState ===
+
+[11:41:00] === INICIO syncDevicesState ===
+[11:41:00] Total dispositivos: 2
+[11:41:00] Activos: 2 | Caídos: 0
+[11:41:00] === FIN syncDevicesState ===
+
+[11:42:00] === INICIO syncDevicesState ===
+[11:42:00] Total dispositivos: 2
+[11:42:00] Activos: 2 | Caídos: 0
+[11:42:00] === FIN syncDevicesState ===
+
+[11:43:00] === INICIO syncDevicesState ===
+[11:43:00] Total dispositivos: 2
+[11:43:00] Activos: 2 | Caídos: 0
+[11:43:00] === FIN syncDevicesState ===
+
+[11:44:00] === INICIO syncDevicesState ===
+[11:44:00] Total dispositivos: 2
+[11:44:00] Activos: 2 | Caídos: 0
+[11:44:00] === FIN syncDevicesState ===
+
+[11:44:42] ======================================
+[11:44:42] INICIANDO SERVICIO...
+[11:44:42] ======================================
+[11:44:42] Middlewares configurados correctamente
+[11:44:42] ======================================
+[11:44:42] SERVICIO DE MARCADORES HAUG
+[11:44:42] ======================================
+[11:44:42] Entorno: development
+[11:44:42] Puerto: 9000
+[11:44:42] URL: http://localhost:9000
+[11:44:42] DB: 10.100.1.28
+[11:44:42] Inicio: 2026-03-26T16:44:42.994Z
+[11:44:42] ======================================
+
+[11:44:43] ======================================
+[11:44:43] INICIALIZANDO CRON JOBS...
+[11:44:43] ======================================
+[11:44:43] CRON iniciados correctamente
+[11:44:43] CRON activos desde: 11:44:43
+[11:45:00] === INICIO syncDevicesState ===
+[11:45:00] Total dispositivos: 2
+[11:45:00] Activos: 2 | Caídos: 0
+[11:45:00] === FIN syncDevicesState ===
+
+[11:46:00] === INICIO syncDevicesState ===
+[11:46:00] Total dispositivos: 2
+[11:46:00] Activos: 2 | Caídos: 0
+[11:46:00] === FIN syncDevicesState ===
+
+[11:46:16] ======================================
+[11:46:16] INICIANDO SERVICIO...
+[11:46:16] ======================================
+[11:46:16] Middlewares configurados correctamente
+[11:46:16] ======================================
+[11:46:16] SERVICIO DE MARCADORES HAUG
+[11:46:16] ======================================
+[11:46:16] Entorno: development
+[11:46:16] Puerto: 9000
+[11:46:16] URL: http://localhost:9000
+[11:46:16] DB: 10.100.1.28
+[11:46:16] Inicio: 2026-03-26T16:46:16.369Z
+[11:46:16] ======================================
+
+[11:46:16] ======================================
+[11:46:16] INICIALIZANDO CRON JOBS...
+[11:46:16] ======================================
+[11:46:16] CRON iniciados correctamente
+[11:46:16] CRON activos desde: 11:46:16
+[11:47:00] === INICIO syncDevicesState ===
+[11:47:00] Total dispositivos: 2
+[11:47:00] Activos: 2 | Caídos: 0
+[11:47:00] REPORTE DIARIO ONLINE
+[11:47:15] Error email ONLINE: La plantilla no existe: D:\Proyectos\HaugMarcacionesServiceWindows\src\template\NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html
+[11:47:15] REPORTE DIARIO: VDE2251700174
+[11:47:30] Error email ONLINE: La plantilla no existe: D:\Proyectos\HaugMarcacionesServiceWindows\src\template\NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html
+[11:47:30] REPORTE DIARIO: VDE2251700184
+[11:47:30] === FIN syncDevicesState ===
+
+[11:48:00] === INICIO syncDevicesState ===
+[11:48:00] Total dispositivos: 2
+[11:48:00] Activos: 2 | Caídos: 0
+[11:48:00] REPORTE DIARIO ONLINE
+[11:48:00] === FIN syncDevicesState ===
+
+[11:49:00] === INICIO syncDevicesState ===
+[11:49:00] Total dispositivos: 2
+[11:49:00] Activos: 2 | Caídos: 0
+[11:49:00] REPORTE DIARIO ONLINE
+[11:49:00] === FIN syncDevicesState ===
+
+[11:50:00] === INICIO syncDevicesState ===
+[11:50:00] Total dispositivos: 2
+[11:50:00] Activos: 2 | Caídos: 0
+[11:50:00] REPORTE DIARIO ONLINE
+[11:50:00] === FIN syncDevicesState ===
+
+[11:51:00] === INICIO syncDevicesState ===
+[11:51:00] Total dispositivos: 2
+[11:51:00] Activos: 2 | Caídos: 0
+[11:51:00] REPORTE DIARIO ONLINE
+[11:51:00] === FIN syncDevicesState ===
+
+[11:52:00] === INICIO syncDevicesState ===
+[11:52:00] Total dispositivos: 2
+[11:52:00] Activos: 2 | Caídos: 0
+[11:52:00] REPORTE DIARIO ONLINE
+[11:52:00] === FIN syncDevicesState ===
+
+[11:52:15] ======================================
+[11:52:15] INICIANDO SERVICIO...
+[11:52:15] ======================================
+[11:52:15] Middlewares configurados correctamente
+[11:52:15] ======================================
+[11:52:15] SERVICIO DE MARCADORES HAUG
+[11:52:15] ======================================
+[11:52:15] Entorno: development
+[11:52:15] Puerto: 9000
+[11:52:15] URL: http://localhost:9000
+[11:52:15] DB: 10.100.1.28
+[11:52:15] Inicio: 2026-03-26T16:52:15.970Z
+[11:52:15] ======================================
+
+[11:52:15] ======================================
+[11:52:15] INICIALIZANDO CRON JOBS...
+[11:52:15] ======================================
+[11:52:15] CRON iniciados correctamente
+[11:52:15] CRON activos desde: 11:52:15
+[11:53:00] === INICIO syncDevicesState ===
+[11:53:00] Total dispositivos: 2
+[11:53:00] Activos: 2 | Caídos: 0
+[11:53:00] REPORTE DIARIO ONLINE
+[11:53:00] === FIN syncDevicesState ===
+
+[11:53:33] ======================================
+[11:53:33] INICIANDO SERVICIO...
+[11:53:33] ======================================
+[11:53:33] Middlewares configurados correctamente
+[11:53:33] ======================================
+[11:53:33] SERVICIO DE MARCADORES HAUG
+[11:53:33] ======================================
+[11:53:33] Entorno: development
+[11:53:33] Puerto: 9000
+[11:53:33] URL: http://localhost:9000
+[11:53:33] DB: 10.100.1.28
+[11:53:33] Inicio: 2026-03-26T16:53:33.728Z
+[11:53:33] ======================================
+
+[11:53:33] ======================================
+[11:53:33] INICIALIZANDO CRON JOBS...
+[11:53:33] ======================================
+[11:53:33] CRON iniciados correctamente
+[11:53:33] CRON activos desde: 11:53:33
+[11:54:00] === INICIO syncDevicesState ===
+[11:54:00] Total dispositivos: 2
+[11:54:00] Activos: 2 | Caídos: 0
+[11:54:00] === FIN syncDevicesState ===
+
+[11:54:20] ======================================
+[11:54:20] INICIANDO SERVICIO...
+[11:54:20] ======================================
+[11:54:20] Middlewares configurados correctamente
+[11:54:20] ======================================
+[11:54:20] SERVICIO DE MARCADORES HAUG
+[11:54:20] ======================================
+[11:54:20] Entorno: development
+[11:54:20] Puerto: 9000
+[11:54:20] URL: http://localhost:9000
+[11:54:20] DB: 10.100.1.28
+[11:54:20] Inicio: 2026-03-26T16:54:20.108Z
+[11:54:20] ======================================
+
+[11:54:20] ======================================
+[11:54:20] INICIALIZANDO CRON JOBS...
+[11:54:20] ======================================
+[11:54:20] CRON iniciados correctamente
+[11:54:20] CRON activos desde: 11:54:20
+[11:55:00] === INICIO syncDevicesState ===
+[11:55:00] Total dispositivos: 2
+[11:55:00] Activos: 2 | Caídos: 0
+[11:55:00] === FIN syncDevicesState ===
+
+[11:56:00] === INICIO syncDevicesState ===
+[11:56:00] Total dispositivos: 2
+[11:56:00] Activos: 2 | Caídos: 0
+[11:56:00] === FIN syncDevicesState ===
+
+[11:57:00] === INICIO syncDevicesState ===
+[11:57:00] Total dispositivos: 2
+[11:57:00] Activos: 2 | Caídos: 0
+[11:57:00] === FIN syncDevicesState ===
+
+[11:58:00] === INICIO syncDevicesState ===
+[11:58:00] Total dispositivos: 2
+[11:58:00] Activos: 2 | Caídos: 0
+[11:58:00] === FIN syncDevicesState ===
+
+[11:58:21] ======================================
+[11:58:21] INICIANDO SERVICIO...
+[11:58:21] ======================================
+[11:58:21] Middlewares configurados correctamente
+[11:58:21] ======================================
+[11:58:21] SERVICIO DE MARCADORES HAUG
+[11:58:21] ======================================
+[11:58:21] Entorno: development
+[11:58:21] Puerto: 9000
+[11:58:21] URL: http://localhost:9000
+[11:58:21] DB: 10.100.1.28
+[11:58:21] Inicio: 2026-03-26T16:58:21.658Z
+[11:58:21] ======================================
+
+[11:58:21] ======================================
+[11:58:21] INICIALIZANDO CRON JOBS...
+[11:58:21] ======================================
+[11:58:21] CRON iniciados correctamente
+[11:58:21] CRON activos desde: 11:58:21
+[11:59:00] === INICIO syncDevicesState ===
+[11:59:00] Total dispositivos: 2
+[11:59:00] Activos: 2 | Caídos: 0
+[11:59:00] REPORTE DIARIO ONLINE
+[11:59:00] === FIN syncDevicesState ===
+
+[11:59:44] ======================================
+[11:59:44] INICIANDO SERVICIO...
+[11:59:44] ======================================
+[11:59:44] Middlewares configurados correctamente
+[11:59:44] ======================================
+[11:59:44] SERVICIO DE MARCADORES HAUG
+[11:59:44] ======================================
+[11:59:44] Entorno: development
+[11:59:44] Puerto: 9000
+[11:59:44] URL: http://localhost:9000
+[11:59:44] DB: 10.100.1.28
+[11:59:44] Inicio: 2026-03-26T16:59:44.780Z
+[11:59:44] ======================================
+
+[11:59:44] ======================================
+[11:59:44] INICIALIZANDO CRON JOBS...
+[11:59:44] ======================================
+[11:59:44] CRON iniciados correctamente
+[11:59:44] CRON activos desde: 11:59:44
+[12:00:00] === INICIO syncTransaccionsBioTimes ===
+[12:00:00] === INICIO syncDevicesState ===
+[12:00:00] Rango: 2026-03-26 11:35:00 → 2026-03-26 12:00:00
+[12:00:00] Total dispositivos: 2
+[12:00:00] Activos: 2 | Caídos: 0
+[12:00:00] === FIN syncDevicesState ===
+
+[12:00:00] Página 1: 0
+[12:00:00] Sin datos
+[12:00:00] Sincronizando marcaciones...
+[12:00:00] Sincronizando completada...
+[12:00:00] === FIN syncTransaccionsBioTimes ===
+
+[12:00:10] 
+SIGINT recibido - cerrando servicio...
+[12:08:27] ======================================
+[12:08:27] INICIANDO SERVICIO...
+[12:08:27] ======================================
+[12:08:27] Middlewares configurados correctamente
+[12:08:27] ======================================
+[12:08:27] SERVICIO DE MARCADORES HAUG
+[12:08:27] ======================================
+[12:08:27] Entorno: development
+[12:08:27] Puerto: 9000
+[12:08:27] URL: http://localhost:9000
+[12:08:27] DB: 10.100.1.28
+[12:08:27] Inicio: 2026-03-26T17:08:27.662Z
+[12:08:27] ======================================
+
+[12:08:27] ======================================
+[12:08:27] INICIALIZANDO CRON JOBS...
+[12:08:27] ======================================
+[12:08:27] CRON iniciados correctamente
+[12:08:27] CRON activos desde: 12:08:27
+[12:08:38] ======================================
+[12:08:38] INICIANDO SERVICIO...
+[12:08:38] ======================================
+[12:08:38] Middlewares configurados correctamente
+[12:08:38] ======================================
+[12:08:38] SERVICIO DE MARCADORES HAUG
+[12:08:38] ======================================
+[12:08:38] Entorno: development
+[12:08:38] Puerto: 9000
+[12:08:38] URL: http://localhost:9000
+[12:08:38] DB: 10.100.1.28
+[12:08:38] Inicio: 2026-03-26T17:08:38.199Z
+[12:08:38] ======================================
+
+[12:08:38] ======================================
+[12:08:38] INICIALIZANDO CRON JOBS...
+[12:08:38] ======================================
+[12:08:38] CRON iniciados correctamente
+[12:08:38] CRON activos desde: 12:08:38
+[12:09:00] === INICIO syncDevicesState ===
+[12:09:00] Total dispositivos: 2
+[12:09:00] Activos: 2 | Caídos: 0
+[12:09:00] === FIN syncDevicesState ===
+
+[12:10:00] === INICIO syncDevicesState ===
+[12:10:00] Total dispositivos: 2
+[12:10:00] Activos: 2 | Caídos: 0
+[12:10:00] === FIN syncDevicesState ===
+
+[12:11:00] === INICIO syncDevicesState ===
+[12:11:00] Total dispositivos: 2
+[12:11:00] Activos: 2 | Caídos: 0
+[12:11:00] === FIN syncDevicesState ===
+
+[12:11:19] ======================================
+[12:11:19] INICIANDO SERVICIO...
+[12:11:19] ======================================
+[12:11:19] Middlewares configurados correctamente
+[12:11:19] ======================================
+[12:11:19] SERVICIO DE MARCADORES HAUG
+[12:11:19] ======================================
+[12:11:19] Entorno: development
+[12:11:19] Puerto: 9000
+[12:11:19] URL: http://localhost:9000
+[12:11:19] DB: 10.100.1.28
+[12:11:19] Inicio: 2026-03-26T17:11:19.469Z
+[12:11:19] ======================================
+
+[12:11:19] ======================================
+[12:11:19] INICIALIZANDO CRON JOBS...
+[12:11:19] ======================================
+[12:11:19] CRON iniciados correctamente
+[12:11:19] CRON activos desde: 12:11:19
+[12:12:00] === INICIO syncDevicesState ===
+[12:12:00] Total dispositivos: 2
+[12:12:00] Activos: 1 | Caídos: 1
+[12:12:00] Email OFFLINE enviado: VDE2251700174
+[12:12:00] ALERTA OFFLINE: VDE2251700174
+[12:12:00] === FIN syncDevicesState ===
+
+[12:12:50] ======================================
+[12:12:50] INICIANDO SERVICIO...
+[12:12:50] ======================================
+[12:12:50] Middlewares configurados correctamente
+[12:12:50] ======================================
+[12:12:50] SERVICIO DE MARCADORES HAUG
+[12:12:50] ======================================
+[12:12:50] Entorno: development
+[12:12:50] Puerto: 9000
+[12:12:50] URL: http://localhost:9000
+[12:12:50] DB: 10.100.1.28
+[12:12:50] Inicio: 2026-03-26T17:12:50.042Z
+[12:12:50] ======================================
+
+[12:12:50] ======================================
+[12:12:50] INICIALIZANDO CRON JOBS...
+[12:12:50] ======================================
+[12:12:50] CRON iniciados correctamente
+[12:12:50] CRON activos desde: 12:12:50
+[12:13:00] === INICIO syncDevicesState ===
+[12:13:00] Total dispositivos: 2
+[12:13:00] Activos: 1 | Caídos: 1
+[12:13:00] === FIN syncDevicesState ===
+
+[12:13:18] ======================================
+[12:13:18] INICIANDO SERVICIO...
+[12:13:18] ======================================
+[12:13:18] Middlewares configurados correctamente
+[12:13:18] ======================================
+[12:13:18] SERVICIO DE MARCADORES HAUG
+[12:13:18] ======================================
+[12:13:18] Entorno: development
+[12:13:18] Puerto: 9000
+[12:13:18] URL: http://localhost:9000
+[12:13:18] DB: 10.100.1.28
+[12:13:18] Inicio: 2026-03-26T17:13:18.625Z
+[12:13:18] ======================================
+
+[12:13:18] ======================================
+[12:13:18] INICIALIZANDO CRON JOBS...
+[12:13:18] ======================================
+[12:13:18] CRON iniciados correctamente
+[12:13:18] CRON activos desde: 12:13:18
+[12:14:00] === INICIO syncDevicesState ===
+[12:14:00] Total dispositivos: 2
+[12:14:00] Activos: 1 | Caídos: 2
+[12:14:00] Email OFFLINE enviado: VDE2251700174
+[12:14:00] ALERTA OFFLINE: VDE2251700174
+[12:14:00] Email OFFLINE enviado: VDE2251700184
+[12:14:00] ALERTA OFFLINE: VDE2251700184
+[12:14:00] Email ONLINE enviado: VDE2251700184
+[12:14:00] RECUPERADO: VDE2251700184
+[12:14:00] === FIN syncDevicesState ===
+
+[12:15:00] === INICIO syncDevicesState ===
+[12:15:00] Total dispositivos: 2
+[12:15:00] Activos: 1 | Caídos: 2
+[12:15:00] Email OFFLINE enviado: VDE2251700184
+[12:15:00] ALERTA OFFLINE: VDE2251700184
+[12:15:00] Email ONLINE enviado: VDE2251700184
+[12:15:00] RECUPERADO: VDE2251700184
+[12:15:00] === FIN syncDevicesState ===
+
+[12:15:27] ======================================
+[12:15:27] INICIANDO SERVICIO...
+[12:15:27] ======================================
+[12:15:27] Middlewares configurados correctamente
+[12:15:27] ======================================
+[12:15:27] SERVICIO DE MARCADORES HAUG
+[12:15:27] ======================================
+[12:15:27] Entorno: development
+[12:15:27] Puerto: 9000
+[12:15:27] URL: http://localhost:9000
+[12:15:27] DB: 10.100.1.28
+[12:15:27] Inicio: 2026-03-26T17:15:27.047Z
+[12:15:27] ======================================
+
+[12:15:27] ======================================
+[12:15:27] INICIALIZANDO CRON JOBS...
+[12:15:27] ======================================
+[12:15:27] CRON iniciados correctamente
+[12:15:27] CRON activos desde: 12:15:27
+[12:16:00] === INICIO syncDevicesState ===
+[12:16:00] Error leyendo estado: Unexpected end of JSON input
+[12:16:00] Total dispositivos: 2
+[12:16:00] Activos: 2 | Caídos: 0
+[12:16:00] === FIN syncDevicesState ===
+
+[12:17:00] === INICIO syncDevicesState ===
+[12:17:00] Total dispositivos: 2
+[12:17:00] Activos: 2 | Caídos: 0
+[12:17:00] === FIN syncDevicesState ===
+
+[12:18:00] === INICIO syncDevicesState ===
+[12:18:00] Total dispositivos: 2
+[12:18:00] Activos: 2 | Caídos: 0
+[12:18:00] === FIN syncDevicesState ===
+
+[12:19:00] === INICIO syncDevicesState ===
+[12:19:00] Total dispositivos: 2
+[12:19:00] Activos: 2 | Caídos: 0
+[12:19:00] === FIN syncDevicesState ===
+
+[12:20:00] === INICIO syncDevicesState ===
+[12:20:00] Total dispositivos: 2
+[12:20:00] Activos: 2 | Caídos: 0
+[12:20:00] === FIN syncDevicesState ===
+
+[12:21:00] === INICIO syncDevicesState ===
+[12:21:00] Total dispositivos: 2
+[12:21:00] Activos: 2 | Caídos: 0
+[12:21:00] === FIN syncDevicesState ===
+
+[12:22:00] === INICIO syncDevicesState ===
+[12:22:00] Total dispositivos: 2
+[12:22:00] Activos: 2 | Caídos: 0
+[12:22:00] === FIN syncDevicesState ===
+
+[12:23:00] === INICIO syncDevicesState ===
+[12:23:00] Total dispositivos: 2
+[12:23:00] Activos: 2 | Caídos: 0
+[12:23:00] === FIN syncDevicesState ===
+
+[12:24:00] === INICIO syncDevicesState ===
+[12:24:00] Total dispositivos: 2
+[12:24:00] Activos: 2 | Caídos: 0
+[12:24:00] === FIN syncDevicesState ===
+
+[12:25:00] === INICIO syncDevicesState ===
+[12:25:00] Total dispositivos: 2
+[12:25:00] Activos: 2 | Caídos: 0
+[12:25:00] === FIN syncDevicesState ===
+
+[12:26:00] === INICIO syncDevicesState ===
+[12:26:00] Total dispositivos: 2
+[12:26:00] Activos: 2 | Caídos: 0
+[12:26:00] === FIN syncDevicesState ===
+
+[12:27:00] === INICIO syncDevicesState ===
+[12:27:00] Total dispositivos: 2
+[12:27:00] Activos: 2 | Caídos: 0
+[12:27:00] === FIN syncDevicesState ===
+
+[12:28:00] === INICIO syncDevicesState ===
+[12:28:00] Total dispositivos: 2
+[12:28:00] Activos: 2 | Caídos: 0
+[12:28:00] === FIN syncDevicesState ===
+
+[12:28:23] ======================================
+[12:28:23] INICIANDO SERVICIO...
+[12:28:23] ======================================
+[12:28:23] Middlewares configurados correctamente
+[12:28:23] ======================================
+[12:28:23] SERVICIO DE MARCADORES HAUG
+[12:28:23] ======================================
+[12:28:23] Entorno: development
+[12:28:23] Puerto: 9000
+[12:28:23] URL: http://localhost:9000
+[12:28:23] DB: 10.100.1.28
+[12:28:23] Inicio: 2026-03-26T17:28:23.459Z
+[12:28:23] ======================================
+
+[12:28:23] ======================================
+[12:28:23] INICIALIZANDO CRON JOBS...
+[12:28:23] ======================================
+[12:28:23] CRON iniciados correctamente
+[12:28:23] CRON activos desde: 12:28:23
+[13:00:00] === INICIO syncTransaccionsBioTimes ===
+[13:00:00] === INICIO syncDevicesState ===
+[13:00:00] Rango: 2026-03-26 12:00:00 → 2026-03-26 13:00:00
+[13:00:00] Total dispositivos: 2
+[13:00:00] Activos: 2 | Caídos: 0
+[13:00:00] === FIN syncDevicesState ===
+
+[13:00:00] Página 1: 1
+[13:00:00] Insertados: 1
+[13:00:00] Sincronizando marcaciones...
+[13:00:00] Sincronizando completada...
+[13:00:00] === FIN syncTransaccionsBioTimes ===
+
+[14:00:00] === INICIO syncTransaccionsBioTimes ===
+[14:00:00] === INICIO syncDevicesState ===
+[14:00:00] Rango: 2026-03-26 13:00:00 → 2026-03-26 14:00:00
+[14:00:00] Total dispositivos: 2
+[14:00:00] Activos: 2 | Caídos: 0
+[14:00:00] === FIN syncDevicesState ===
+
+[14:00:00] Página 1: 1
+[14:00:00] Insertados: 1
+[14:00:00] Sincronizando marcaciones...
+[14:00:00] Sincronizando completada...
+[14:00:00] === FIN syncTransaccionsBioTimes ===
+
+[15:00:00] === INICIO syncDevicesState ===
+[15:00:00] === INICIO syncTransaccionsBioTimes ===
+[15:00:00] Rango: 2026-03-26 15:00:00 → 2026-03-26 15:00:00
+[15:00:00] Total dispositivos: 2
+[15:00:00] Activos: 2 | Caídos: 0
+[15:00:00] === FIN syncDevicesState ===
+
+[15:00:00] Página 1: 0
+[15:00:00] Sin datos
+[15:00:00] Sincronizando marcaciones...
+[15:00:00] Sincronizando completada...
+[15:00:00] === FIN syncTransaccionsBioTimes ===
+
+[16:00:00] === INICIO syncTransaccionsBioTimes ===
+[16:00:00] === INICIO syncDevicesState ===
+[16:00:00] Rango: 2026-03-26 16:00:00 → 2026-03-26 16:00:00
+[16:00:00] Total dispositivos: 2
+[16:00:00] Activos: 2 | Caídos: 0
+[16:00:00] === FIN syncDevicesState ===
+
+[16:00:00] Página 1: 0
+[16:00:00] Sin datos
+[16:00:00] Sincronizando marcaciones...
+[16:00:00] Sincronizando completada...
+[16:00:00] === FIN syncTransaccionsBioTimes ===
+
+[17:00:00] === INICIO syncDevicesState ===
+[17:00:00] === INICIO syncTransaccionsBioTimes ===
+[17:00:00] Rango: 2026-03-26 17:00:00 → 2026-03-26 17:00:00
+[17:00:00] Total dispositivos: 2
+[17:00:00] Activos: 2 | Caídos: 0
+[17:00:00] === FIN syncDevicesState ===
+
+[17:00:00] Página 1: 0
+[17:00:00] Sin datos
+[17:00:00] Sincronizando marcaciones...
+[17:00:00] Sincronizando completada...
+[17:00:00] === FIN syncTransaccionsBioTimes ===
+
+[18:00:00] === INICIO syncDevicesState ===
+[18:00:00] === INICIO syncTransaccionsBioTimes ===
+[18:00:00] Rango: 2026-03-26 17:00:00 → 2026-03-26 18:00:00
+[18:00:00] Total dispositivos: 2
+[18:00:00] Activos: 2 | Caídos: 0
+[18:00:00] === FIN syncDevicesState ===
+
+[18:00:00] Página 1: 35
+[18:00:00] Insertados: 35
+[18:00:00] Sincronizando marcaciones...
+[18:00:00] Sincronizando completada...
+[18:00:00] === FIN syncTransaccionsBioTimes ===
+
+[19:00:00] === INICIO syncTransaccionsBioTimes ===
+[19:00:00] === INICIO syncDevicesState ===
+[19:00:00] Rango: 2026-03-26 18:00:00 → 2026-03-26 19:00:00
+[19:00:00] Total dispositivos: 2
+[19:00:00] Activos: 2 | Caídos: 0
+[19:00:00] === FIN syncDevicesState ===
+
+[19:00:00] Página 1: 19
+[19:00:00] Insertados: 19
+[19:00:00] Sincronizando marcaciones...
+[19:00:00] Sincronizando completada...
+[19:00:00] === FIN syncTransaccionsBioTimes ===
+
+[20:00:00] === INICIO syncTransaccionsBioTimes ===
+[20:00:00] === INICIO syncDevicesState ===
+[20:00:00] Rango: 2026-03-26 19:00:00 → 2026-03-26 20:00:00
+[20:00:00] Total dispositivos: 2
+[20:00:00] Activos: 2 | Caídos: 0
+[20:00:00] === FIN syncDevicesState ===
+
+[20:00:00] Página 1: 8
+[20:00:00] Insertados: 8
+[20:00:00] Sincronizando marcaciones...
+[20:00:00] Sincronizando completada...
+[20:00:00] === FIN syncTransaccionsBioTimes ===
+
+[21:00:00] === INICIO syncDevicesState ===
+[21:00:00] === INICIO syncTransaccionsBioTimes ===
+[21:00:00] Rango: 2026-03-26 20:00:00 → 2026-03-26 21:00:00
+[21:00:00] Página 1: 0
+[21:00:00] Sin datos
+[21:00:00] Sincronizando marcaciones...
+[21:00:00] Sincronizando completada...
+[21:00:00] === FIN syncTransaccionsBioTimes ===
+
+[21:00:00] Total dispositivos: 2
+[21:00:00] Activos: 2 | Caídos: 0
+[21:00:00] === FIN syncDevicesState ===
+
+[22:00:00] === INICIO syncTransaccionsBioTimes ===
+[22:00:00] === INICIO syncDevicesState ===
+[22:00:00] Rango: 2026-03-26 21:00:00 → 2026-03-26 22:00:00
+[22:00:00] Página 1: 0
+[22:00:00] Sin datos
+[22:00:00] Sincronizando marcaciones...
+[22:00:00] Total dispositivos: 2
+[22:00:00] Activos: 2 | Caídos: 0
+[22:00:00] === FIN syncDevicesState ===
+
+[22:00:00] Sincronizando completada...
+[22:00:00] === FIN syncTransaccionsBioTimes ===
+
+[23:00:00] === INICIO syncTransaccionsBioTimes ===
+[23:00:00] === INICIO syncDevicesState ===
+[23:00:00] Rango: 2026-03-26 22:00:00 → 2026-03-26 23:00:00
+[23:00:00] Total dispositivos: 2
+[23:00:00] Activos: 2 | Caídos: 0
+[23:00:00] === FIN syncDevicesState ===
+
+[23:00:00] Página 1: 0
+[23:00:00] Sin datos
+[23:00:00] Sincronizando marcaciones...
+[23:00:01] Sincronizando completada...
+[23:00:01] === FIN syncTransaccionsBioTimes ===
+

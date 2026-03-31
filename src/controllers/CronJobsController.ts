@@ -176,9 +176,9 @@ async function sendDeviceActiveMail(device: any) {
     const fecha = moment().format("DD/MM/YYYY HH:mm");
 
     await emailService.sendEmail({
-      to     : [process.env.CORREO_SOPORTE || "soporte@haug.com.pe"],
-      subject: `DISPOSITIVO ONLINE - ${device.alias}`,
-      templatePath: path.join(__dirname,"../template/NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html"),
+      to            : [process.env.CORREO_PRUEBA],
+      subject       : `DISPOSITIVO ONLINE - ${device.alias}`,
+      templatePath  : path.join(__dirname,"../template/NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html"),
       templateParams: { fecha, ...device, estado: "EN LÍNEA" }
     });
 
@@ -194,9 +194,9 @@ async function sendDeviceDownMail(device: any) {
     const fecha = moment().format("DD/MM/YYYY HH:mm");
 
     await emailService.sendEmail({
-      to     : [process.env.CORREO_SOPORTE || "soporte@haug.com.pe"],
-      subject: `DISPOSITIVO OFFLINE - ${device.alias}`,
-      templatePath: path.join(__dirname,"../template/NOTIFICACION_REPORTE_DISPOSITIVO_CAIDO.html"),
+      to            : [process.env.CORREO_PRUEBA],
+      subject       : `DISPOSITIVO OFFLINE - ${device.alias}`,
+      templatePath  : path.join(__dirname,"../template/NOTIFICACION_REPORTE_DISPOSITIVO_CAIDO.html"),
       templateParams: { fecha, ...device }
     });
 
@@ -284,6 +284,16 @@ export async function syncTransaccionsBioTimes() {
     } else {
       await logger.writeLog("Sin datos");
     }
+
+    
+    // Sincronizar marcaciones
+    await logger.writeLog(`Sincronizando marcaciones...`);
+    await DB.exec(
+      [],
+      STORE_PROCEDURE.SSCA.SSCA_SP_SINCRONIZAR_BIOTIME_MARCACION_PERSONAL
+    );
+    await logger.writeLog(`Sincronizando completada...`);
+
 
   } catch (error: any) {
     await logger.writeLog(`ERROR: ${error.message}`);

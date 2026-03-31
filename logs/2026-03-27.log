@@ -1,0 +1,128 @@
+[00:00:00] === INICIO syncTransaccionsBioTimes ===
+[00:00:00] === INICIO syncDevicesState ===
+[00:00:00] Rango: 2026-03-26 23:00:01 → 2026-03-27 00:00:00
+[00:00:00] Total dispositivos: 2
+[00:00:00] Activos: 2 | Caídos: 0
+[00:00:00] === FIN syncDevicesState ===
+
+[00:00:00] Página 1: 0
+[00:00:00] Sin datos
+[00:00:00] Sincronizando marcaciones...
+[00:00:00] Sincronizando completada...
+[00:00:00] === FIN syncTransaccionsBioTimes ===
+
+[01:00:00] === INICIO syncTransaccionsBioTimes ===
+[01:00:00] === INICIO syncDevicesState ===
+[01:00:00] Rango: 2026-03-27 00:00:00 → 2026-03-27 01:00:00
+[01:00:00] Total dispositivos: 2
+[01:00:00] Activos: 2 | Caídos: 0
+[01:00:00] === FIN syncDevicesState ===
+
+[01:00:00] Página 1: 0
+[01:00:00] Sin datos
+[01:00:00] Sincronizando marcaciones...
+[01:00:00] Sincronizando completada...
+[01:00:00] === FIN syncTransaccionsBioTimes ===
+
+[02:00:00] === INICIO syncTransaccionsBioTimes ===
+[02:00:00] === INICIO syncDevicesState ===
+[02:00:00] Rango: 2026-03-27 01:00:00 → 2026-03-27 02:00:00
+[02:00:00] Página 1: 0
+[02:00:00] Sin datos
+[02:00:00] Sincronizando marcaciones...
+[02:00:00] Total dispositivos: 2
+[02:00:00] Activos: 2 | Caídos: 0
+[02:00:00] === FIN syncDevicesState ===
+
+[02:00:00] Sincronizando completada...
+[02:00:00] === FIN syncTransaccionsBioTimes ===
+
+[03:00:00] === INICIO syncTransaccionsBioTimes ===
+[03:00:00] === INICIO syncDevicesState ===
+[03:00:00] Rango: 2026-03-27 02:00:00 → 2026-03-27 03:00:00
+[03:00:00] Total dispositivos: 2
+[03:00:00] Activos: 2 | Caídos: 0
+[03:00:00] === FIN syncDevicesState ===
+
+[03:00:00] Página 1: 0
+[03:00:00] Sin datos
+[03:00:00] Sincronizando marcaciones...
+[03:00:00] Sincronizando completada...
+[03:00:00] === FIN syncTransaccionsBioTimes ===
+
+[04:00:00] === INICIO syncTransaccionsBioTimes ===
+[04:00:00] === INICIO syncDevicesState ===
+[04:00:00] Rango: 2026-03-27 04:00:00 → 2026-03-27 04:00:00
+[04:00:00] Total dispositivos: 2
+[04:00:00] Activos: 2 | Caídos: 0
+[04:00:00] === FIN syncDevicesState ===
+
+[04:00:00] Página 1: 0
+[04:00:00] Sin datos
+[04:00:00] Sincronizando marcaciones...
+[04:00:00] Sincronizando completada...
+[04:00:00] === FIN syncTransaccionsBioTimes ===
+
+[05:00:00] === INICIO syncTransaccionsBioTimes ===
+[05:00:00] === INICIO syncDevicesState ===
+[05:00:00] Rango: 2026-03-27 04:00:00 → 2026-03-27 05:00:00
+[05:00:00] Página 1: 0
+[05:00:00] Sin datos
+[05:00:00] Sincronizando marcaciones...
+[05:00:00] Sincronizando completada...
+[05:00:00] === FIN syncTransaccionsBioTimes ===
+
+[05:00:00] Total dispositivos: 2
+[05:00:00] Activos: 2 | Caídos: 0
+[05:00:00] === FIN syncDevicesState ===
+
+[06:00:00] === INICIO syncTransaccionsBioTimes ===
+[06:00:00] === INICIO syncDevicesState ===
+[06:00:00] Rango: 2026-03-27 05:00:00 → 2026-03-27 06:00:00
+[06:00:00] Total dispositivos: 2
+[06:00:00] Activos: 2 | Caídos: 0
+[06:00:00] REPORTE DIARIO ONLINE
+[06:00:00] Página 1: 0
+[06:00:00] Sin datos
+[06:00:00] Sincronizando marcaciones...
+[06:00:00] Sincronizando completada...
+[06:00:00] === FIN syncTransaccionsBioTimes ===
+
+[06:00:00] Email ONLINE enviado: VDE2251700174
+[06:00:00] REPORTE DIARIO: VDE2251700174
+[06:00:00] Email ONLINE enviado: VDE2251700184
+[06:00:00] REPORTE DIARIO: VDE2251700184
+[06:00:00] === FIN syncDevicesState ===
+
+[07:00:00] === INICIO syncDevicesState ===
+[07:00:00] === INICIO syncTransaccionsBioTimes ===
+[07:00:00] Rango: 2026-03-27 06:00:00 → 2026-03-27 07:00:00
+[07:00:00] Total dispositivos: 2
+[07:00:00] Activos: 2 | Caídos: 0
+[07:00:00] === FIN syncDevicesState ===
+
+[07:00:00] Página 1: 57
+[07:00:00] Insertados: 57
+[07:00:00] Sincronizando marcaciones...
+[07:00:01] Sincronizando completada...
+[07:00:01] === FIN syncTransaccionsBioTimes ===
+
+[08:00:00] === INICIO syncDevicesState ===
+[08:00:00] === INICIO syncTransaccionsBioTimes ===
+[08:00:00] Rango: 2026-03-27 07:00:01 → 2026-03-27 08:00:00
+[08:00:00] Total dispositivos: 2
+[08:00:00] Activos: 2 | Caídos: 0
+[08:00:00] === FIN syncDevicesState ===
+
+[08:00:00] Página 1: 8
+[08:00:00] Insertados: 8
+[08:00:00] Sincronizando marcaciones...
+[08:00:00] Sincronizando completada...
+[08:00:00] === FIN syncTransaccionsBioTimes ===
+
+[08:52:14] 
+SIGINT recibido - cerrando servicio...
+[08:52:14] CRON detenidos correctamente
+[08:52:14] Servidor HTTP cerrado
+[08:52:14] Proceso finalizado correctamente
+

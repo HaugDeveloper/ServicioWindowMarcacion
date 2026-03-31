@@ -1,3 +1,12 @@
 {
-  "devices": {}
+  "devices": {
+    "VDE2251700174": {
+      "lastActiveNotificationDate": "2026-03-27",
+      "lastState": "ACTIVE"
+    },
+    "VDE2251700184": {
+      "lastActiveNotificationDate": "2026-03-27",
+      "lastState": "ACTIVE"
+    }
+  }
 }

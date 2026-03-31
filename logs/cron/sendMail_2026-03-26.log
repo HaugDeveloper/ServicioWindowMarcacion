@@ -1,0 +1,83 @@
+[2026-03-26 11:36:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:36:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:36:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:37:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:37:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:37:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:38:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:38:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:38:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:39:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:39:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:39:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:40:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:40:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:40:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:41:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:41:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:41:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:42:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:42:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:42:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:43:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:43:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:43:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:44:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:44:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:44:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:45:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:45:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:45:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:46:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:46:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:46:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:47:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:47:00] ERROR | Error enviando correo SMTP | {"error":"La plantilla no existe: D:\\Proyectos\\HaugMarcacionesServiceWindows\\src\\template\\NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html","host":"10.10.1.6","port":"25"}
+[2026-03-26 11:47:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:47:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:47:05] ERROR | Error enviando correo SMTP | {"error":"La plantilla no existe: D:\\Proyectos\\HaugMarcacionesServiceWindows\\src\\template\\NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html","host":"10.10.1.6","port":"25"}
+[2026-03-26 11:47:10] ERROR | Error enviando correo SMTP | {"error":"La plantilla no existe: D:\\Proyectos\\HaugMarcacionesServiceWindows\\src\\template\\NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html","host":"10.10.1.6","port":"25"}
+[2026-03-26 11:47:15] ERROR | Error definitivo enviando email | {"error":{},"host":"10.10.1.6","port":"25"}
+[2026-03-26 11:47:15] ERROR | Error enviando correo SMTP | {"error":"La plantilla no existe: D:\\Proyectos\\HaugMarcacionesServiceWindows\\src\\template\\NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html","host":"10.10.1.6","port":"25"}
+[2026-03-26 11:47:20] ERROR | Error enviando correo SMTP | {"error":"La plantilla no existe: D:\\Proyectos\\HaugMarcacionesServiceWindows\\src\\template\\NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html","host":"10.10.1.6","port":"25"}
+[2026-03-26 11:47:25] ERROR | Error enviando correo SMTP | {"error":"La plantilla no existe: D:\\Proyectos\\HaugMarcacionesServiceWindows\\src\\template\\NOTIFICACION_REPORTE_DISPOSITIVO_ACTIVO.html","host":"10.10.1.6","port":"25"}
+[2026-03-26 11:47:30] ERROR | Error definitivo enviando email | {"error":{},"host":"10.10.1.6","port":"25"}
+[2026-03-26 11:48:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:48:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:48:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:49:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:49:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:49:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:50:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:50:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:50:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:51:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:51:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:51:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:52:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:52:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:52:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:53:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:53:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:53:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:54:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:54:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:54:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:55:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:55:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:55:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:56:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:56:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:56:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:57:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:57:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:57:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:58:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:58:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:58:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 11:59:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 11:59:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 11:59:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx
+[2026-03-26 12:00:00] OK | Inicio envío correo | Fecha reporte: 25-03-2026
+[2026-03-26 12:00:00] OK | Correo enviado correctamente | Total marcaciones: 72
+[2026-03-26 12:00:00] OK | Archivo temporal eliminado: D:\Proyectos\HaugMarcacionesServiceWindows\src\temp\Reporte_Marcaciones_25-03-2026.xlsx

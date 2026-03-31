@@ -31,7 +31,7 @@ function killProcesses() {
   } catch {}
 }
 
-// 🔥 ELIMINAR SERVICIO FORZADO
+// ELIMINAR SERVICIO FORZADO
 function forceDeleteService() {
   try {
     execSync(`sc stop ${SERVICE_NAME}`, { stdio: 'ignore' });
@@ -44,9 +44,9 @@ function forceDeleteService() {
 
 // Crear servicio
 const svc = new Service({
-  name: SERVICE_NAME,
+  name       : SERVICE_NAME,
   description: 'Servicio de marcaciones Haug en Node.js',
-  script: SCRIPT_PATH,
+  script     : SCRIPT_PATH,
 
   startType: 'delayed-auto',
 
@@ -54,8 +54,8 @@ const svc = new Service({
     '--max_old_space_size=4096'
   ],
 
-  wait: 2,
-  grow: 0.5,
+  wait      : 2,
+  grow      : 0.5,
   maxRetries: 999,
 
   // IMPORTANTE

@@ -1,20 +1,31 @@
 import express, { Application, Request, Response } from "express";
 import cors                                         from "cors";
-import path                                         from "path";
 import morgan                                       from "morgan";
 import dotenv                                       from "dotenv";
-import { initCrons }                                from "./jobs";
-import logger                                       from './utils/logger';
+import { initCrons, stopCrons }                     from "./jobs";
+import logger                                       from "./utils/logger";
 
-// dotenv.config();
+dotenv.config();
 
+/* ============================================================
+   VARIABLES GLOBALES
+============================================================ */
+let serverInstance: any;
+let isShuttingDown = false;
+
+/* ============================================================
+   UTILIDADES
+============================================================ */
 function getHoraPeru(): string {
-  return new Date().toLocaleTimeString('es-PE', {
-    timeZone: 'America/Lima',
-    hour12: false
+  return new Date().toLocaleTimeString("es-PE", {
+    timeZone: "America/Lima",
+    hour12  : false
   });
 }
 
+/* ============================================================
+   APP CLASS
+============================================================ */
 class App {
   public app: Application;
 
@@ -37,7 +48,7 @@ class App {
         origin:
           process.env.NODE_ENV === "production"
             ? ["http://ti.haug.com.pe"]
-            : true,
+                            :  true,
         credentials         : true,
         allowedHeaders      : ["Content-Type", "Authorization", "access-token"],
         exposedHeaders      : ["Content-Range", "X-Content-Range"],
@@ -47,7 +58,7 @@ class App {
     );
 
     // ===============================
-    // MORGAN → LOGGER (NO console.log)
+    // MORGAN → LOGGER
     // ===============================
     const stream = {
       write: async (message: string) => {
@@ -63,7 +74,7 @@ class App {
     );
 
     // ===============================
-    // BODY PARSER
+    // BODY
     // ===============================
     this.app.use(express.json({ limit: "50MB" }));
     this.app.use(express.urlencoded({ limit: "50MB", extended: true }));
@@ -78,21 +89,17 @@ class App {
 
   private routes(): void {
 
-    // ===============================
-    // HEALTH CHECK
-    // ===============================
-    this.app.get("/health", async (req: Request, res: Response) => {
+    this.app.get("/health", async (_req: Request, res: Response) => {
 
       await logger.writeLog("Health check ejecutado");
 
       res.status(200).json({
-        status      : "OK",
-        timestamp   : new Date().toISOString(),
-        environment : process.env.NODE_ENV,
-        uptime      : process.uptime(),
+        status     : "OK",
+        timestamp  : new Date().toISOString(),
+        environment: process.env.NODE_ENV,
+        uptime     : process.uptime(),
       });
     });
-
   }
 
   private initCrons(): void {
@@ -108,9 +115,8 @@ class App {
       logger.writeLog(`CRON activos desde: ${getHoraPeru()}`);
 
     } catch (error: any) {
-
       logger.writeLog(`ERROR CRON: ${error.message}`);
-      logger.logError(error, 'initCrons');
+      logger.logError(error, "initCrons");
     }
   }
 
@@ -118,7 +124,7 @@ class App {
 
     const port = this.app.get("port");
 
-    const server = this.app.listen(port, async () => {
+    serverInstance = this.app.listen(port, async () => {
 
       await logger.writeLog("======================================");
       await logger.writeLog("SERVICIO DE MARCADORES HAUG");
@@ -130,14 +136,10 @@ class App {
       await logger.writeLog(`Inicio: ${new Date().toISOString()}`);
       await logger.writeLog("======================================\n");
 
-      // 🔥 CRONS DESPUÉS DE INICIAR
       this.initCrons();
     });
 
-    // ===============================
-    // ERRORES DEL SERVER
-    // ===============================
-    server.on("error", async (error: any) => {
+    serverInstance.on("error", async (error: any) => {
 
       if (error.code === "EADDRINUSE") {
         await logger.writeLog(`ERROR: Puerto ${port} en uso`);
@@ -145,48 +147,87 @@ class App {
         await logger.writeLog(`ERROR SERVER: ${error.message}`);
       }
 
-      await logger.logError(error, 'server');
+      await logger.logError(error, "server");
     });
+  }
+}
+
+/* ============================================================
+   SHUTDOWN CONTROLADO
+============================================================ */
+async function shutdown(signal: string) {
+
+  if (isShuttingDown) return;
+  isShuttingDown = true;
+
+  try {
+    await logger.writeLog(`\n${signal} recibido - cerrando servicio...`);
+
+    // ===============================
+    // DETENER CRONS
+    // ===============================
+    try {
+      await stopCrons();
+      await logger.writeLog("CRON detenidos correctamente");
+    } catch (error: any) {
+      await logger.writeLog(`ERROR al detener CRON: ${error.message}`);
+    }
+
+    // ===============================
+    // CERRAR SERVIDOR HTTP
+    // ===============================
+    if (serverInstance) {
+      await new Promise<void>((resolve, reject) => {
+        serverInstance.close((err: any) => {
+          if (err) return reject(err);
+          resolve();
+        });
+      });
+
+      await logger.writeLog("Servidor HTTP cerrado");
+    }
+
+    await logger.writeLog("Proceso finalizado correctamente\n");
+
+    process.exit(0);
+
+  } catch (error: any) {
+    await logger.writeLog(`ERROR en shutdown: ${error.message}`);
+    process.exit(1);
   }
 }
 
 /* ============================================================
    INICIO APP
 ============================================================ */
-
 (async () => {
 
   await logger.writeLog("======================================");
   await logger.writeLog("INICIANDO SERVICIO...");
   await logger.writeLog("======================================");
 
-  const server = new App();
-  server.start();
+  const app = new App();
+  app.start();
 
 })();
 
 /* ============================================================
-   SEÑALES DEL SISTEMA (WINDOWS SERVICE)
+   SEÑALES DEL SISTEMA
 ============================================================ */
-
-process.on("SIGTERM", async () => {
-  await logger.writeLog("SIGTERM recibido - cerrando servicio...");
-});
-
-process.on("SIGINT", async () => {
-  await logger.writeLog("SIGINT recibido - cerrando servicio...");
-});
+process.on("SIGINT", shutdown);
+process.on("SIGTERM", shutdown);
 
 /* ============================================================
    ERRORES GLOBALES
 ============================================================ */
-
-process.on('uncaughtException', async (err) => {
+process.on("uncaughtException", async (err) => {
   await logger.writeLog(`UNCAUGHT EXCEPTION: ${err.message}`);
-  await logger.logError(err, 'uncaughtException');
+  await logger.logError(err, "uncaughtException");
+  await shutdown("uncaughtException");
 });
 
-process.on('unhandledRejection', async (reason: any) => {
+process.on("unhandledRejection", async (reason: any) => {
   await logger.writeLog(`UNHANDLED REJECTION: ${reason}`);
-  await logger.logError(reason, 'unhandledRejection');
+  await logger.logError(reason, "unhandledRejection");
+  await shutdown("unhandledRejection");
 });

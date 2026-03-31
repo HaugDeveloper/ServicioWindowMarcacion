@@ -41,26 +41,10 @@ async function sendMail() {
         //   "NOTIFICACION_REPORTE_MARCACIONES_POR_FECHA.html"
         // );
         await emailService_1.emailService.sendEmail({
-            to: [
-                "mario.incio@haug.com.pe"
-            ],
-            // to     : [
-            //   "maria.mendizabal@haug.com.pe"
-            // ],
-            // cc: [
-            //   "jose.romero@haug.com.pe",
-            //   "jose.romero@haug.com.pe"
-            // ],
-            // cc     : [
-            //   "soporte@haug.com.pe",
-            //   "renzo.zelaya@haug.com.pe",
-            //   "mario.incio@haug.com.pe",
-            //   "christian.torres@haug.com.pe",
-            //   "freddy.rendon@haug.com.pe"
-            // ],
-            // bcc    : [
-            //   "jose.romero@haug.com.pe"
-            // ],
+            to: [process.env.CORREO_PRUEBA],
+            // to     :  [process.env.CORREO_RRRHH],
+            // cc     :  parseEmails(process.env.CORREO_PRUEBA),
+            bcc: [],
             subject: `Reporte de Marcaciones de la fecha - ${data.fecha}`,
             text: `Resumen de marcaciones para ${data.fecha}: Activos ${data.Total_Personal_Biotime}, Marcaciones ${data.Total_Marcaron}.`,
             templatePath,
@@ -93,6 +77,12 @@ async function sendMail() {
             }
         }
     }
+}
+function parseEmails(envVar) {
+    return (envVar || "")
+        .split(",")
+        .map(e => e.trim())
+        .filter(Boolean);
 }
 // ==================================================
 // --- Función para obtener marcaciones por fecha ---
